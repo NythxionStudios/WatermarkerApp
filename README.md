@@ -13,13 +13,16 @@
 
 **Nythxion Watermarker** is a watermarking application developed by **Nythxion Studios**.
 
-It can apply visible and holographic watermarks to images, generate unique watermark IDs, verify existing artworks, save watermark configurations, and integrate with Figma.
+It can apply visible and holographic watermarks to images and videos, generate unique watermark IDs, embed and verify metadata, verify existing artwork, save watermark configurations, and integrate with Figma.
 
 ## Features
 
 * Visible image watermarking
+* Video watermarking
 * Holographic watermark embedding
 * Unique watermark IDs
+* Metadata embedding
+* Metadata verification
 * Watermark verification
 * Artwork Archive
 * AI Instruction support
@@ -27,6 +30,8 @@ It can apply visible and holographic watermarks to images, generate unique water
 * Persistent local archive
 * Saves system for watermark configurations
 * Redesigned user interface
+* Redesigned Figma application GUI
+* Figma metadata support
 * Figma application integration
 * Windows desktop application
 * Fast and lightweight
@@ -56,11 +61,34 @@ The archive is stored locally on your computer and is not uploaded to Nythxion S
 
 ## Watermark Verification
 
-Nythxion Watermarker uses the embedded watermark ID to verify artwork.
+Nythxion Watermarker uses watermark IDs and embedded metadata to verify processed artwork.
 
-If the watermark ID exists in the local Artwork Archive, the artwork can be identified using its archived information.
+The verification system can check both the existing watermark information and embedded Nythxion Watermarker metadata.
+
+Metadata verification is supported for images and videos.
 
 > **Important:** Applying a new watermark to an already-watermarked image may invalidate or overwrite its existing watermark.
+
+## Metadata
+
+Nythxion Watermarker can embed metadata into exported images and videos.
+
+Embedded metadata can contain information such as:
+
+* Nythxion Watermarker
+* Watermarker version
+* Processing date
+* Unique Watermark ID
+
+This metadata can later be read by the verification system.
+
+## Video Watermarking
+
+Nythxion Watermarker now supports **video watermarking**.
+
+Videos can be imported, previewed, watermarked, and exported through the Watermarker.
+
+Preview rendering uses a reduced resolution and FPS to improve performance during editing, while final exports retain the original video resolution and FPS.
 
 ## AI Instruction
 
@@ -76,11 +104,25 @@ The Figma integration allows artwork to be exported and processed using Nythxion
 
 The Figma application can synchronize watermark configuration with the desktop application through a local connection.
 
+## Figma Metadata
+
+The Figma application now supports **Nythxion Watermarker metadata**.
+
+Artwork exported through the Figma integration can include Nythxion Watermarker metadata and can be processed by the metadata verification system.
+
 ## User Interface
 
-Version 1.1.0 introduces a redesigned Nythxion Watermarker interface.
+Version 1.2.0 introduces an updated Nythxion Watermarker interface and a redesigned Figma application GUI.
 
-The new UI provides a cleaner and more organized experience for configuring, saving, verifying, and managing watermarked artwork.
+The new Figma interface provides a cleaner and more native Figma-style experience while keeping the existing functionality accessible.
+
+## Performance
+
+Preview rendering has been optimized to reduce unnecessary processing during editing.
+
+Video previews are rendered at a reduced resolution and FPS instead of using the full source resolution and FPS for every preview update.
+
+Final exports continue to use the original source quality and FPS.
 
 ## Privacy
 
@@ -99,17 +141,18 @@ Your Artwork Archive and saved configurations are stored locally and are not aut
 
 ## Installation
 
-No traditional installer is required.
+Nythxion Watermarker is distributed through an official Windows installer.
 
-1. Extract the ZIP archive.
-2. Open the extracted **Nythxion-Watermarker** folder.
-3. Launch **Nythxion Watermarker.exe**.
+1. Run the **Nythxion Watermarker Setup** installer.
+2. Choose the installation directory if desired.
+3. Complete the installation.
+4. Launch **Nythxion Watermarker** from the created shortcut.
 
-Do not move, delete, or modify files from the application folder after extraction.
+The installer also provides a proper Windows uninstall option.
 
 ## Version
 
-**Nythxion Watermarker V1.1.0**
+**Nythxion Watermarker V1.2.0**
 
 ## Developer
 
@@ -136,6 +179,3 @@ Nythxion Studios is not responsible for data loss, corrupted files, or other dam
 ---
 
 **© 2026 Nythxion Studios • Nythxion Development**
-
-```
-```
